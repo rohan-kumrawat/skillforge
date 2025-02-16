@@ -23,7 +23,7 @@ export const registerUser = async (req, res) => {
     res.json({ token });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Server Error');
+    res.status(500).send('Server Error', error);
   }
 };
 
@@ -42,6 +42,6 @@ export const loginUser = async (req, res) => {
     res.json({ token });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Server Error');
+    res.status(500).send('Server Error', error);
   }
 };
